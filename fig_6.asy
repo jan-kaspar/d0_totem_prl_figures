@@ -189,7 +189,9 @@ label(expLabel, (0.98, -1.1), W, Fill(white));
 limits((0.46, 4e-3), (1.0, 1e-1), Crop);
 
 AddToLegend("<$\sqrt s = 1.96\un{TeV}$");
-AddToLegend("$p\bar p$ by D0", mCi+2pt+blue);
-AddToLegend("$pp$ by TOTEM (char.~points)", mTD+2.5pt+red);
-AddToLegend("$pp$ by TOTEM (D0 bins)", mTU+2.5pt+black);
-AttachLegend(shift(-5, -20) * BuildLegend(NE, lineLength=5mm, vSkip=-1mm, framePen=nullpen), NE);
+AddToLegend("$p\bar p$ measurement by D0", mCi+2pt+blue);
+AddToLegend("$pp$ extrapolation by TOTEM:");
+AddToLegend("band center at char.~points", mTD+2.5pt+red);
+AddToLegend("band center at D0 bins", mTU+2.5pt+black);
+AddToLegend("band width ($\pm 1\un{\si}$)", red+dashed);
+AttachLegend(shift(-5, -10) * BuildLegend(NE, lineLength=5mm, vSkip=-1mm, framePen=nullpen), NE);

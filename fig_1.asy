@@ -202,8 +202,9 @@ DrawPoint(0.653 , 0.01, 0.0131, 0.0033);
 DrawPoint(0.6727, 0.01, 0.0171, 0.0049);
 DrawPoint(0.7021, 0.02, 0.0148, 0.003 );
 DrawPoint(0.7412, 0.02, 0.0122, 0.0032);
+point_fill = false;
 DrawPoint(0.8   , 0.04, 0.0171, 0.0049);
-
+point_fill = true;
 
 // extrapolation 1.96 TeV
 pp = black;

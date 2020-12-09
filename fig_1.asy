@@ -5,7 +5,7 @@ include "style.asy";
 
 string f = "/afs/cern.ch/work/j/jkaspar/work/analyses/D0_TOTEM_old/fits/low_t,high_t/e012+e023:f=0.2/st+sy+no/do_fits.root";
 
-xSizeDef = 12cm;
+xSizeDef = 8cm;
 
 //----------------------------------------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ real x_lab = 0.89;
 
 // TOTEM 13 TeV
 pp = magenta;
-AddToLegend("TOTEM measurement at $\sqrt s = 13\un{TeV}$", mCi+2pt+pp);
+AddToLegend("TOTEM $\sqrt s = 13\un{TeV}$", mCi+1pt+pp);
 draw(RootGetObject(f, "13TeV/g_fit"), "l", pp);
 sc = 1;
 DrawPoint(0.3409 , 0.0039, 0.4261, 0.0242);
@@ -105,7 +105,7 @@ DrawPoint(0.86279, 0.008 , 0.0269, 0.0016);
 
 // TOTEM 8 TeV
 pp = blue;
-AddToLegend("TOTEM measurement at $\sqrt s = 8\un{TeV}$", mCi+2pt+pp);
+AddToLegend("TOTEM $\sqrt s = 8\un{TeV}$", mCi+1pt+pp);
 TF1_x_min = 0.38; TF1_x_max = 1.08;
 draw(RootGetObject(f, "8TeV/g_fit"), "l", pp);
 sc = 1;
@@ -133,7 +133,7 @@ DrawPoint(1.0337, 0.031 , 0.0086, 0.001 );
 
 // TOTEM 7 TeV
 pp = heavygreen;
-AddToLegend("TOTEM measurement at $\sqrt s = 7\un{TeV}$", mCi+2pt+pp);
+AddToLegend("TOTEM $\sqrt s = 7\un{TeV}$", mCi+1pt+pp);
 TF1_x_min = 0.37; TF1_x_max = 0.93;
 draw(RootGetObject(f, "7TeV/g_fit"), "l", pp);
 sc = 1;
@@ -184,7 +184,7 @@ DrawPoint(0.913 , 0.0085, 0.0141, 0.0025);
 
 // TOTEM 2.76 TeV
 pp = red;
-AddToLegend("TOTEM measurement at $\sqrt s = 2.76\un{TeV}$", mCi+2pt+pp);
+AddToLegend("TOTEM $\sqrt s = 2.76\un{TeV}$", mCi+1pt+pp);
 TF1_x_min = 0.44; TF1_x_max = 0.85;
 draw(RootGetObject(f, "2.76TeV/g_fit"), "l", pp);
 sc = 1;
@@ -209,7 +209,7 @@ point_fill = true;
 // extrapolation 1.96 TeV
 pp = black;
 point_fill = false;
-AddToLegend("TOTEM extrapolation to $\sqrt s = 1.96\un{TeV}$", mCi+2pt+false+pp);
+AddToLegend("TOTEM $\sqrt s = 1.96\un{TeV}$", mCi+1pt+false+pp);
 DrawPoint(0.486140147142593, 0.009103328134492, 0.081432532995515, 0.012374378239514);
 DrawPoint(0.517979343255533, 0.009390427618439, 0.047087898870369, 0.006539691761808);
 DrawPoint(0.596504072646106, 0.009801516571181, 0.012216117516359, 0.001762948479047);
@@ -277,7 +277,7 @@ draw(g, pp);
 // D0 measurement
 pp = black;
 point_fill = true;
-AddToLegend("D0 measurement at $\sqrt s = 1.96\un{TeV}$", mTU+2.5pt+true+pp);
+AddToLegend("D0 $\sqrt s = 1.96\un{TeV}$", mTU+1.5pt+true+pp);
 DrawPoint(0.26, 0., 47.3e-1, 2.60e-1, true);
 DrawPoint(0.30, 0., 21.4e-1, 0.72e-1, true);
 DrawPoint(0.34, 0., 10.6e-1, 0.37e-1, true);
@@ -296,8 +296,8 @@ DrawPoint(1.04, 0., 5.77e-3, 1.30e-3, true);
 DrawPoint(1.12, 0., 5.73e-3, 1.30e-3, true);
 DrawPoint(1.20, 0., 2.84e-3, 1.70e-3, true);
 
-label(expLabel, (0.31, -0.15), E, Fill(white));
+label(expLabel, (0.33, -0.15), E, Fill(white));
 
-limits((0.3, 4e-3), (1.1, 1e0), Crop);
+limits((0.32, 4e-3), (1.0, 1e0), Crop);
 
 AttachLegend(shift(-5, -5) * BuildLegend(vSkip=-1mm, framePen=nullpen));

@@ -2,6 +2,8 @@ import pad_layout;
 
 include "style.asy";
 
+ySizeDef = 4.3cm;
+
 //----------------------------------------------------------------------------------------------------
 
 pen p;
@@ -75,4 +77,4 @@ AddToLegend("TOTEM measurements", mCi+2pt+black);
 AddToLegend("fit", red);
 AddToLegend("$\pm 1\un{\si}$ fit uncertainty band", red+dashed);
 AddToLegend("extrapolation", mSt+3pt+blue);
-AttachLegend(shift(-5, +10) * BuildLegend(SE, lineLength=5mm, vSkip=-1mm, framePen=nullpen), SE);
+AttachLegend(shift(-5, +5) * BuildLegend(SE, lineLength=5mm, vSkip=-1mm, framePen=nullpen, xmargin=0mm, ymargin=0pt), SE);

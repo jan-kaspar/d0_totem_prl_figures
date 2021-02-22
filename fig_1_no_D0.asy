@@ -34,7 +34,7 @@ real x_lab = 0.89;
 
 // TOTEM 13 TeV
 pp = magenta;
-AddToLegend("TOTEM $\sqrt s = 13\un{TeV}$", mCi+1pt+pp);
+AddToLegend("$\sqrt s = 13\un{TeV}$", mCi+2pt+pp);
 draw(RootGetObject(f, "13TeV/g_fit"), "l", pp);
 sc = 1;
 DrawPoint(0.3409 , 0.0039, 0.4261, 0.0242);
@@ -105,7 +105,7 @@ DrawPoint(0.86279, 0.008 , 0.0269, 0.0016);
 
 // TOTEM 8 TeV
 pp = blue;
-AddToLegend("TOTEM $\sqrt s = 8\un{TeV}$", mCi+1pt+pp);
+AddToLegend("$\sqrt s = 8\un{TeV}$", mCi+2pt+pp);
 TF1_x_min = 0.38; TF1_x_max = 1.08;
 draw(RootGetObject(f, "8TeV/g_fit"), "l", pp);
 sc = 1;
@@ -133,7 +133,7 @@ DrawPoint(1.0337, 0.031 , 0.0086, 0.001 );
 
 // TOTEM 7 TeV
 pp = heavygreen;
-AddToLegend("TOTEM $\sqrt s = 7\un{TeV}$", mCi+1pt+pp);
+AddToLegend("$\sqrt s = 7\un{TeV}$", mCi+2pt+pp);
 TF1_x_min = 0.37; TF1_x_max = 0.93;
 draw(RootGetObject(f, "7TeV/g_fit"), "l", pp);
 sc = 1;
@@ -184,7 +184,7 @@ DrawPoint(0.913 , 0.0085, 0.0141, 0.0025);
 
 // TOTEM 2.76 TeV
 pp = red;
-AddToLegend("TOTEM $\sqrt s = 2.76\un{TeV}$", mCi+1pt+pp);
+AddToLegend("$\sqrt s = 2.76\un{TeV}$", mCi+2pt+pp);
 TF1_x_min = 0.44; TF1_x_max = 0.85;
 draw(RootGetObject(f, "2.76TeV/g_fit"), "l", pp);
 sc = 1;
@@ -209,7 +209,7 @@ point_fill = true;
 // extrapolation 1.96 TeV
 pp = black;
 point_fill = false;
-AddToLegend("TOTEM $\sqrt s = 1.96\un{TeV}$", mCi+1pt+false+pp);
+AddToLegend("$\sqrt s = 1.96\un{TeV}$ (extrap.)", mCi+2pt+false+pp);
 DrawPoint(0.486140147142593, 0.009103328134492, 0.081432532995515, 0.012374378239514);
 DrawPoint(0.517979343255533, 0.009390427618439, 0.047087898870369, 0.006539691761808);
 DrawPoint(0.596504072646106, 0.009801516571181, 0.012216117516359, 0.001762948479047);
@@ -298,7 +298,7 @@ DrawPoint(1.12, 0., 5.73e-3, 1.30e-3, true);
 DrawPoint(1.20, 0., 2.84e-3, 1.70e-3, true);
 */
 
-label(expLabel, (0.33, -0.15), E, Fill(white));
+label(totemLabel, (0.33, -0.15), E, Fill(white));
 
 limits((0.32, 4e-3), (1.0, 1e0), Crop);
 

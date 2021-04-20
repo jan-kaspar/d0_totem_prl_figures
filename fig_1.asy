@@ -209,7 +209,7 @@ point_fill = true;
 // extrapolation 1.96 TeV
 pp = black;
 point_fill = false;
-AddToLegend("TOTEM $\sqrt s = 1.96\un{TeV}$", mCi+1pt+false+pp);
+AddToLegend("TOTEM $\sqrt s = 1.96\un{TeV}$ (extrap.)", mCi+1pt+false+pp);
 DrawPoint(0.486140147142593, 0.009103328134492, 0.081432532995515, 0.012374378239514);
 DrawPoint(0.517979343255533, 0.009390427618439, 0.047087898870369, 0.006539691761808);
 DrawPoint(0.596504072646106, 0.009801516571181, 0.012216117516359, 0.001762948479047);
@@ -300,4 +300,4 @@ label(expLabel, (0.33, -0.15), E, Fill(white));
 
 limits((0.32, 4e-3), (1.0, 1e0), Crop);
 
-AttachLegend(shift(-5, -5) * BuildLegend(vSkip=-1mm, framePen=nullpen));
+AttachLegend(shift(-5, -5) * BuildLegend(lineLength=2mm, vSkip=-1mm, framePen=nullpen));

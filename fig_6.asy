@@ -187,17 +187,19 @@ AddD0Point(1.12, 0.04, 0.00573, 0.0013, 0.00655512, 0.00490488);
 AddD0Point(1.20, 0.04, 0.00284, 0.0017, 0.00324896, 0.00243104);
 //draw(g_d0, blue+dotted);
 
-label(expLabel, (0.98, -1.1), W, Fill(white));
-
 limits((0.46, 4e-3), (1.0, 1e-1), Crop);
 
 AddToLegend("<$\sqrt s = 1.96\un{TeV}$");
 
-AddToLegend("<\cBlueR $p\bar p$ measurement by D0:");
+AddToLegend("<\cBlueR $p\bar p$ measurement by D0:\vrule width0pt height4.5mm");
 AddToLegend("central values with error bars", mCi+2pt+blue);
 
-AddToLegend("<\cRedR $pp$ extrapolation by TOTEM:");
+AddToLegend("<\cRedR $pp$ extrapolation by TOTEM:\vrule width0pt height4.5mm");
 //AddToLegend("band center at char.~points", mTD+2.5pt+red);
 AddToLegend("band center at D0 bins", mTU+2.5pt+red);
 AddToLegend("band width ($\pm 1\un{\si}$)", red+dashed);
-AttachLegend(shift(-5, -10) * BuildLegend(NE, lineLength=5mm, vSkip=-1mm, framePen=nullpen), NE);
+AttachLegend(shift(-2, -4) * BuildLegend(NE, lineLength=5mm, vSkip=-1mm, framePen=nullpen), NE);
+
+
+currentpicture.legend.delete();
+AttachLegend(shift(-2, -4) * BuildLegend(NE, title=expLabel, lineLength=5mm, vSkip=-1mm, framePen=nullpen), NE);

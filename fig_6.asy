@@ -5,6 +5,9 @@ import patterns;
 
 include "style.asy";
 
+pen blue = cmyk(0.9, 0.5, 0, 0.1);
+pen red = cmyk(0, 1, 1, 0);
+
 //----------------------------------------------------------------------------------------------------
 
 guide g_unc_band_mi;
@@ -190,10 +193,10 @@ limits((0.46, 4e-3), (1.0, 1e-1), Crop);
 
 AddToLegend("<$\sqrt s = 1.96\un{TeV}$");
 
-AddToLegend("<$p\bar p$ measurement by D0:");
+AddToLegend("<\cBlueR $p\bar p$ measurement by D0:");
 AddToLegend("central values with error bars", mCi+2pt+blue);
 
-AddToLegend("<$pp$ extrapolation by TOTEM:");
+AddToLegend("<\cRedR $pp$ extrapolation by TOTEM:");
 //AddToLegend("band center at char.~points", mTD+2.5pt+red);
 AddToLegend("band center at D0 bins", mTU+2.5pt+red);
 AddToLegend("band width ($\pm 1\un{\si}$)", red+dashed);
